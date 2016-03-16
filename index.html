@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" ng-app="App">
+<head>
+    <meta charset="UTF-8">
+    <title>Constantine Podlesny</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/angular-material.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body layout="column" ng-controller="appCtrl">
+<md-toolbar layout="row" class="md-whiteframe-z5">
+    <div class="md-toolbar-tools">
+        <md-button ng-click="toggleLeft()" hide-gt-md class="md-icon-button">
+            <md-icon aria-label="Menu" md-svg-icon="images/ic_menu_white_36px.svg"></md-icon>
+        </md-button>
+        <h1>{{title}}</h1>
+    </div>
+</md-toolbar>
+<section layout="row" flex>
+    <md-sidenav class="md-sidenav-left md-whiteframe-z5" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+        <img src="images/me.4c9357d3.jpg" style="width: 304px; height: 220px;" alt=""/>
+        <md-content layout="column" layout-padding ng-controller="leftSideNavCtrl">
+            <md-button ng-click="toggleLeft()" class=" md-whiteframe-z1 md-hue-1" href="#/">Skills</md-button>
+            <md-button ng-click="toggleLeft()" class=" md-whiteframe-z1 md-hue-1" href="#/sources">Sources</md-button>
+            <md-button ng-click="toggleLeft()" class=" md-whiteframe-z1 md-hue-1" href="#/contact">Contact</md-button>
+            <h1 class="md-headline">Front-end Developer</h1>
+            <h1 class="md-title" style="text-transform: uppercase">tools</h1>
+            <h1 class="md-body-2">Angular, Backbone, JQuery, Npm, Bower, Gulp, Angular Material, Bootstrap, Foundation, PHP, SQL.</h1>
+            <md-divider></md-divider>
+            <md-button href="tel:+380676883078" class="md-fab md-raised">
+                call
+                <md-tooltip md-direction="right">+380 67 688 30 78</md-tooltip>
+            </md-button>
+            <md-button href="mailto:podlesny@outlook.com" class="md-fab md-raised">
+                mail
+                <md-tooltip md-direction="right">podlesny@outlook.com</md-tooltip>
+            </md-button>
+            <md-divider></md-divider>
+            <md-button ng-click="close()" class="md-warn md-raised md-hue-3" hide-gt-md> Close Sidenav </md-button>
+        </md-content>
+    </md-sidenav>
+    <md-content flex layout-padding>
+        <div>
+            <md-button ng-click="toggleLeft()" class="md-primary" hide-gt-md> Navigation </md-button>
+        </div>
+        <div>
+            <md-button class="md-raised md-primary md-hue-1" ng-click="toggleRight()" class="md-primary"> Research my Skills </md-button>
+        </div>
+        <md-divider></md-divider>
+        <br/>
+        <ng-view></ng-view>
+        <br/>
+        <md-divider></md-divider>
+        <h1 class="md-body-1">Copyright &copy 2015. Podlesny Constantine. All rights reserved</h1>
+    </md-content>
+    <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
+        <md-toolbar class="md-theme-light">
+            <h1 class="md-toolbar-tools">Skills</h1>
+        </md-toolbar>
+        <md-content ng-controller="RightCtrl" layout-padding layout="column">
+            <form>
+                <md-input-container> <label for="testInput">Type here</label> <input type="text" id="testInput" ng-model="search.title" md-autofocus> </md-input-container>
+            </form>
+            <md-button ng-repeat="skill in skills | filter:search" ng-href="{{skill.url}}" class="md-raised md-primary md-hue-3">{{skill.title}}</md-button>
+            <md-button ng-click="close()" class="md-warn md-raised md-hue-3"> Close Sidenav</md-button>
+        </md-content>
+    </md-sidenav>
+</section>
+<script src="js/angular.min.js"></script><script src="js/angular-route.min.js"></script><script src="js/angular-material.min.js"></script><script src="js/angular-animate.min.js"></script><script src="js/angular-aria.min.js"></script><script src="js/main.js"></script>
+</body>
+</html>

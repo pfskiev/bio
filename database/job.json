@@ -1,0 +1,38 @@
+[
+  {
+    "title":"w3c",
+    "name":"World Wide Web Consortium",
+    "url":"http://www.w3.org/",
+    "img":"png"
+  },
+  {
+    "title":"w3schools",
+    "name":"W3schools",
+    "url":"http://www.w3schools.com/",
+    "img":"png"
+  },
+  {
+    "title":"mdn",
+    "name":"Mozilla Developer Network",
+    "url":"https://developer.mozilla.org/ru/",
+    "img":"png"
+  },
+  {
+    "title":"egghead",
+    "name":"Egghead",
+    "url":"https://egghead.io/",
+    "img":"png"
+  },
+  {
+    "title":"ng-conf",
+    "name":"Ng-Conf",
+    "url":"http://www.ng-conf.org/",
+    "img":"png"
+  },
+  {
+    "title":"github",
+    "name":"GitHub",
+    "url":"http://www.ng-conf.org/",
+    "img":"png"
+  }
+]

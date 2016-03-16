@@ -1,0 +1,39 @@
+md-sidenav, md-content {
+    background : #FFFDE7;
+}
+.wtf {
+    background : lightgoldenrodyellow;
+}
+md-grid-list {
+    margin : 8px;
+}
+.lang {
+    background : lightblue;
+}
+.framework {
+    background : lightcyan;
+}
+.version {
+    background : lightcoral;
+}
+.test {
+    background : lightgoldenrodyellow;
+}
+.editor {
+    background : lightgray;
+}
+.transpiling {
+    background : lightgreen;
+}
+.preprocessor {
+    background : lightpink;
+}
+.build {
+    background : lightskyblue;
+}
+.library {
+    background : aliceblue;
+}
+.md-grid-tile {
+    transition : all 400ms 50ms ease-out;
+}
